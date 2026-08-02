@@ -447,9 +447,161 @@ body {
 @media (max-width: 768px) {
   .app {
     flex-direction: column;
-  } 
+    padding: 12px;
+  }
 
   .chat-window {
     flex: 1;
+    height: calc(100dvh - 24px);
+    max-height: none;
+  }
+
+  .chat-header {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .chat-header h2 {
+    font-size: 16px;
+  }
+
+  .chat-header-avatar {
+    font-size: 26px;
+  }
+
+  .chat-header-actions {
+    gap: 6px;
+  }
+
+  .user-badge {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .delete-all-btn,
+  .logout-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .clear-chat-btn {
+    margin-left: 4px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .messages-container {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 8px;
+  }
+
+  .chat-window {
+    height: calc(100dvh - 16px);
+  }
+
+  .chat-header {
+    flex-wrap: wrap;
+    padding: 10px 12px;
+  }
+
+  .chat-header-info {
+    gap: 8px;
+  }
+
+  .chat-header-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .user-badge {
+    display: none;
+  }
+
+  .message {
+    max-width: 95%;
+  }
+
+  .message-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .message-text {
+    font-size: 13px;
+  }
+
+  .chat-input-container {
+    padding: 10px 12px;
+  }
+
+  .chat-input-form {
+    gap: 8px;
+  }
+
+  .chat-input-form input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .send-btn {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+
+  .send-btn-text {
+    margin-left: 6px;
+  }
+
+  .name-prompt-card {
+    padding: 24px 20px;
+  }
+
+  .name-prompt-logo {
+    width: 140px;
+    height: 90px;
+  }
+
+  .name-prompt-card h1 {
+    font-size: 20px;
+  }
+
+  .name-prompt-card p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .name-prompt-card input {
+    font-size: 15px;
+  }
+
+  .primary-btn {
+    font-size: 15px;
+    padding: 11px 20px;
+  }
+
+  .empty-state {
+    padding: 24px 12px;
+  }
+
+  .empty-state-icon {
+    font-size: 38px;
+  }
+
+  /* Hide "Clear Chat" text on very small screens, keep icon only */
+  .clear-chat-btn {
+    display: none;
+  }
+
+  .delete-all-btn {
+    padding: 6px 8px;
   }
 }
