@@ -4,7 +4,8 @@
   "description": "AI-powered customer support chatbot built with React, Node.js, Express, MongoDB, and Gemini API",
   "main": "server/src/app.js",
   "scripts": {
-    "install-all": "npm install && npm --prefix client install && npm --prefix server install",
+    "install-all": "npm --prefix client install && npm --prefix server install",
+    "postinstall": "npm run install-all",
     "build": "npm --prefix client run build",
     "start": "node server/src/app.js",
     "dev:server": "npm --prefix server run dev",
