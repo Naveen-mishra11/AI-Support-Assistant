@@ -165,6 +165,7 @@ body {
 
 .user-badge {
   background: transparent;
+  margin-bottom: 7px;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 16px;
@@ -384,6 +385,10 @@ body {
   margin-left: 7px;
 }
 
+.logout-text {
+  margin-left: 6px;
+}
+
 .send-btn {
   background:  #DFF06C ;
   color: #000000;
@@ -507,7 +512,6 @@ body {
   }
 
   .chat-header {
-    flex-wrap: wrap;
     padding: 10px 12px;
   }
 
@@ -516,13 +520,13 @@ body {
   }
 
   .chat-header-actions {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    width: 100%;
+    gap: 6px;
   }
 
   .user-badge {
-    display: none;
+    font-size: 13px;
+    padding: 4px 8px;
+    white-space: nowrap;
   }
 
   .message {
@@ -596,12 +600,14 @@ body {
     font-size: 38px;
   }
 
-  /* Hide "Clear Chat" text on very small screens, keep icon only */
-  .clear-chat-btn {
+  /* Hide button text on very small screens, keep icons only */
+  .clear-chat-btn,
+  .logout-text {
     display: none;
   }
 
-  .delete-all-btn {
+  .delete-all-btn,
+  .logout-btn {
     padding: 6px 8px;
   }
 }

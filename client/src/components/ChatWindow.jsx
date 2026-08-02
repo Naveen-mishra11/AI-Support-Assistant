@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import ChatMessage from './ChatMessage';
 import ChatInput from './ChatInput';
 import TypingIndicator from './TypingIndicator';
-import { Trash2 } from "lucide-react";
+import { Trash2, LogOut } from "lucide-react";
 
 const ChatWindow = ({ messages, userName, onSend, isTyping, onLogout, onDeleteAllChats }) => {
   const messagesEndRef = useRef(null);
@@ -34,7 +34,8 @@ const ChatWindow = ({ messages, userName, onSend, isTyping, onLogout, onDeleteAl
           <span className='clear-chat-btn'>Clear Chat</span> 
           </button>
           <button className="logout-btn" onClick={onLogout} title="End session">
-            End Session
+            <LogOut size={14} strokeWidth={2} />
+            <span className="logout-text">End Session</span>
           </button>
         </div>
       </div>
