@@ -164,7 +164,42 @@ const getHistory = async (req, res) => {
   }
 };
 
+/**
+ * DELETE /api/chat/history/:id
+ * Delete a specific message by ID
+ */
+const deleteMessage = async (req, res) => {
+  try {
+    const { id } = req.params;
 
+    if (!id) {
+      return res.status(400).json({
+        success: false,
+        error: 'Message ID is required',
+      });
+    }
+
+    const message = await Message.findByIdAndDelete(id);
+
+    if (!message) {
+      return res.status(404).json({
+        success: false,
+        error: 'Message not found',
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: 'Message deleted successfully',
+    });
+  } catch (error) {
+    console.error('Error in deleteMessage:', error);
+    return res.status(500).json({
+      success: false,
+      error: 'Internal server error',
+    });
+  }
+};
 
 /**
  * DELETE /api/chat/history/user/:id
