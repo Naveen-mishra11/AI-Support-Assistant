@@ -4,9 +4,8 @@
   "description": "AI-powered customer support chatbot built with React, Node.js, Express, MongoDB, and Gemini API",
   "main": "server/src/app.js",
   "scripts": {
-    "install-all": "npm --prefix client install && npm --prefix server install",
-    "postinstall": "npm run install-all",
-    "build": "npm --prefix client run build",
+    "install-all": "cd client && npm install --include=dev && cd ../server && npm install",
+    "build": "npm run install-all && cd client && npm run build",
     "start": "node server/src/app.js",
     "dev:server": "npm --prefix server run dev",
     "dev:client": "npm --prefix client run dev"
@@ -20,6 +19,6 @@
     "mongodb",
     "gemini"
   ],
-  "author": "",
+  "author": "Naveen Mishra",
   "license": "MIT"
 }
